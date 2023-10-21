@@ -1,0 +1,23 @@
+.login_background {
+    background-color: yellow;
+    /* height: 100vh; */
+    /* margin:0; */
+    /* padding: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login_container {
+    background-color: #FAF9F6;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    max-width: 300px;
+    min-height: 300px; 
+    margin-left: 40%;
+    margin-top: 10%
+}

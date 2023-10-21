@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import './Login.css'
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/login', {
       method: 'POST',
@@ -26,9 +26,10 @@ export default function Login({ setToken }) {
       }
 
     return(
-      <div className="login-wrapper">
+      <div className="login-wrapper login_container">
         <h1>Please Log In</h1>
         <form onSubmit={handleSubmit}>
+            <div style={{paddingBottom: 'px'}}>
           <label>
             <p>Username</p>
             <input type="text" onChange={e => setUserName(e.target.value)}/>
@@ -37,7 +38,8 @@ export default function Login({ setToken }) {
             <p>Password</p>
             <input type="password" onChange={e => setPassword(e.target.value)}/>
           </label>
-          <div>
+          </div>
+          <div style={{paddingTop: '10px'}}>
             <button type="submit">Submit</button>
           </div>
         </form>
