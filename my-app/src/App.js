@@ -8,6 +8,7 @@ import Signup from './pages/Signup'
 import StartGame from './pages/StartGame'
 import useToken from './useToken'
 import FirstTest from './pages/FirstTest'
+import MoCa from './pages/MoCa'
 
 function App() {
     const { token, setToken } = useToken();
@@ -36,6 +37,8 @@ function App() {
     <Route path="StartGame" element={<StartGame/>}>
     </Route>
     <Route path="FirstTest" element = {<FirstTest/>}>
+    </Route>
+    <Route path="MoCa" element = {<MoCa/>}>
     </Route>
   </Routes>
 </BrowserRouter>
