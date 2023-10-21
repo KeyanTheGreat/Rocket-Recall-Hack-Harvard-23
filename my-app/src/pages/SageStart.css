@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: black; 
+  }
+
+.myButton {
+    background-color: #59007f;
+    border: solid #7600a9;
+    border-radius: 30px;
+    color: white;
+    font: 1.2rem "Fira Sans", sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .myButton.clicked {
+    animation: buttonClickAnimation 0.5s;
+  }
+  
+  @keyframes buttonClickAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .myButton.fadeIn {
+    opacity: 1;
+  }
