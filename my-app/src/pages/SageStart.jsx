@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Link } from 'react';  
 import './SageStart.css';
 
 const Button = () => {

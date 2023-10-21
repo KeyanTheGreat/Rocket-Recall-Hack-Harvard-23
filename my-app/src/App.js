@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import StartGame from './pages/StartGame'
 import useToken from './useToken'
+import SageStart from './pages/SageStart'
 
 function App() {
     const { token, setToken } = useToken();
@@ -32,7 +33,7 @@ function App() {
   <Routes>
     <Route path="StartGame" element={<StartGame/>}>
     </Route>
-    <Route path="StartGame" element={<StartGame/>}>
+    <Route path="SageStart" element={<SageStart/>}>
     </Route>
   </Routes>
 </BrowserRouter>
