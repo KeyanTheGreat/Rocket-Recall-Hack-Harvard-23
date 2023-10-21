@@ -33,8 +33,6 @@ function App() {
   <Routes>
     <Route path="StartGame" element={<StartGame/>}>
     </Route>
-    <Route path="SageStart" element={<SageStart/>}>
-    </Route>
   </Routes>
 </BrowserRouter>
 </div>
