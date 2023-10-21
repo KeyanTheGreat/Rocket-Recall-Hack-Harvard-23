@@ -1,10 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
+import './Startup.css'
 export default function Startup() {
     return (
-        <div>
+        <div className="startup">
             <p>Play game</p>
             <button><Link to="login">Log in</Link></button>
-            <button>Sign up</button>
+            <button><Link to="signup">Sign up</Link></button>
             <Outlet />
         </div>
     )
