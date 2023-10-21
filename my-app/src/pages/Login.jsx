@@ -23,7 +23,14 @@ export default function Login({ setToken }) {
           password
         });
         setToken(token);
+        console.log(token);
+        console.log(username);
+        console.log(password);
       }
+      //may not be able to get object from this, but can get username and password needed for an object
+      //Create user object with fields username, password, etc?
+     
+      
 
     return(
       <div className="login-wrapper login_container">

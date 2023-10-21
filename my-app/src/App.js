@@ -32,8 +32,6 @@ function App() {
 <div className="wrapper">
 <BrowserRouter>
   <Routes>
-    <Route path="/" element = {<Startup />}>
-    </Route>
     <Route path="StartGame" element={<StartGame/>}>
     </Route>
     <Route path="FirstTest" element = {<FirstTest/>}>
