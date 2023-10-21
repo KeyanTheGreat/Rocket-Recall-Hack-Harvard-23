@@ -41,6 +41,13 @@
   .myButton.clicked {
     animation: buttonClickAnimation 0.5s;
   }
+  .color-white {
+    background-color: white !important;
+  }
+  
+  .color-blue {
+    background-color: blue !important;
+  }
   
   @keyframes buttonClickAnimation {
     0% {
