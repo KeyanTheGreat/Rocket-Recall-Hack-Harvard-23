@@ -30,7 +30,7 @@ function App() {
 <div className="wrapper">
 <BrowserRouter>
   <Routes>
-    <Route path="/" element = {<Startup />}>
+    <Route path="StartGame" element={<StartGame/>}>
     </Route>
     <Route path="StartGame" element={<StartGame/>}>
     </Route>
