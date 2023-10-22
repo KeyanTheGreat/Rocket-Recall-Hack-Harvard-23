@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Login.css'
-import {Users} from '../globals'
 
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/login', {
@@ -25,12 +24,9 @@ export default function Login({ setToken }) {
           password
         });
         setToken(token);
-        Users.push({username: username, password: password, token: token})
-        console.log(Users)
         console.log(token);
         console.log(username);
         console.log(password);
-        localStorage.setItem("user_list", Users);
       }
       //may not be able to get object from this, but can get username and password needed for an object
       //Create user object with fields username, password, etc?
