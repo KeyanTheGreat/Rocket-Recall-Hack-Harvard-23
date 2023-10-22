@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom';
 const Button = () => {
   const [clicked, setClicked] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
+  const [linkText, setLinkText] =useState('')
 
   const handleClick = () => {
     setClicked(true);
