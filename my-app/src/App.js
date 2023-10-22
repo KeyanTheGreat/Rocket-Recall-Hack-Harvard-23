@@ -8,6 +8,9 @@ import Signup from './pages/Signup'
 import StartGame from './pages/StartGame'
 import useToken from './useToken'
 import FirstTest from './pages/FirstTest'
+import SageStart from './pages/SageStart'
+import MoCa from './pages/MoCa'
+import CardManager from './pages/CardManager'
 
 function App() {
     const { token, setToken } = useToken();
@@ -31,11 +34,13 @@ function App() {
 <div className="wrapper">
 <BrowserRouter>
   <Routes>
-    <Route path="/" element = {<Startup />}>
+    <Route path="/" element={<StartGame/>}>
     </Route>
-    <Route path="StartGame" element={<StartGame/>}>
+    <Route path="SageStart" element={<SageStart/>}>
     </Route>
-    <Route path="FirstTest" element = {<FirstTest/>}>
+    <Route path="SageStart/CardManager" element = {<CardManager/>}>
+    </Route>
+    <Route path="MoCa" element = {<MoCa/>}>
     </Route>
   </Routes>
 </BrowserRouter>

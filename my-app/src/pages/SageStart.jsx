@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './SageStart.css';
+import { Outlet } from 'react-router-dom';
 
 const Button = () => {
   const [clicked, setClicked] = useState(false);
@@ -19,9 +21,10 @@ const Button = () => {
       className={`myButton ${clicked ? 'clicked' : ''} ${fadeIn ? 'fadeIn' : ''}`}
       onClick={handleClick}
     >
-    <Link to="firsttest">
+    <Link to="CardManager">
       Start Assessment
     </Link>
+    <Outlet />
     </button>
     </div>
   );
