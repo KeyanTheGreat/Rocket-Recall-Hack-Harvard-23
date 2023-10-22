@@ -8,10 +8,10 @@
 
 .myButtonss {
     background-color: #11f692;
-    border: solid #eb2d8c;
+    border: solid #e6cc0f;
     border-radius: 30px;
     color: white;
-    font: 1.2rem "Fira Sans", sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -20,7 +20,7 @@
     margin: 4px 2px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
   
   .myButtonss.clicked {
