@@ -11,6 +11,7 @@ import SageStart from './pages/SageStart'
 import MoCa from './pages/MoCa'
 import CardManager from './pages/CardManager'
 import SequenceMemory from './pages/SequenceMemory'
+import SendEmail from './pages/SendEmail'
 
 function App() {
     const { token, setToken } = useToken();
@@ -43,6 +44,8 @@ function App() {
     <Route path="SageStart/CardManager/SequenceMemory" element = {<SequenceMemory/>}>
     </Route>
     <Route path="SageStart/CardManager/SequenceMemory/MoCa" element = {<MoCa/>}>
+    </Route>
+    <Route path="SendEmail" element = {<SendEmail/>}>
     </Route>
   </Routes>
 </BrowserRouter>
