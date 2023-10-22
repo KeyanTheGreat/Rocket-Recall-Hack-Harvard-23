@@ -24,11 +24,13 @@ export default function ContactUs() {
   }
 
   return (
+    <div className="containerE" style={{ display: 'flex', flexDirection: 'column' }}>
     <form className="contact-form" onSubmit={sendEmail}>
-      <h className={"p1"}>Would you like to send an email to your healthcare provider?</h>
-      <h className={"p2"}> Email:</h>
+      <p className={"p1"}>Would you like to send an email to your healthcare provider?</p>
+      <p className={"p2"}> Email:</p>
       <input type="email" name="user_email" />
       <input type="submit" value="Send" />
     </form>
+    </div>
   );
 }

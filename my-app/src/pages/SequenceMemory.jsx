@@ -108,7 +108,7 @@ const click = () => {
     <button className={"myButton"} onClick={() => {click()}} style={{ opacity: opacity }}> <Link to= {link}>
     {buttonText} 
     </Link></button>
-    <hsm className='hsm'>Memorize the squares that are colored blue, and after they stop flashing, click on them in the order they lit up!</hsm>
+    <h className='hsm'>Memorize the squares that are colored blue, and after they stop flashing, click on them in the order they lit up!</h >
     </div>
   );
 };
