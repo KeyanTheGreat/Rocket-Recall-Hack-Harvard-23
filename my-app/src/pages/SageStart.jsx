@@ -4,6 +4,9 @@ import './SageStart.css';
 const Button = () => {
   const [clicked, setClicked] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
+  const [linkText, setLinkText] = useState('')
+  const [gameList, setGameList] = useState(['CardManager', 'SequenceMemory']);
+  const randomGame = Math.floor(Math.random() * 2);
 
   const handleClick = () => {
     setClicked(true);
@@ -11,15 +14,16 @@ const Button = () => {
 
   setTimeout(() => {
     setFadeIn(true);
-  }, 2000);
+    setLinkText(gameList[randomGame]);
+  }, 500);
 
   return (
     <div className="container">
     <button
-      className={`myButton ${clicked ? 'clicked' : ''} ${fadeIn ? 'fadeIn' : ''}`}
+      className={`myButtonss ${clicked ? 'clicked' : ''} ${fadeIn ? 'fadeIn' : ''}`}
       onClick={handleClick}
     >
-    <Link to="firsttest">
+    <Link to="CardManager">
       Start Assessment
     </Link>
     </button>
