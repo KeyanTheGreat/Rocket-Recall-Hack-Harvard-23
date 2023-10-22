@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import React, { useState, useMemo } from 'react';
-import './FirstTest.css';
+import './SequenceMemory.css';
 
 const Game = () => {
 

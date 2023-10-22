@@ -7,10 +7,10 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import StartGame from './pages/StartGame'
 import useToken from './useToken'
-import FirstTest from './pages/FirstTest'
 import SageStart from './pages/SageStart'
 import MoCa from './pages/MoCa'
 import CardManager from './pages/CardManager'
+import SequenceMemory from './pages/SequenceMemory'
 
 function App() {
     const { token, setToken } = useToken();
@@ -39,6 +39,8 @@ function App() {
     <Route path="SageStart" element={<SageStart/>}>
     </Route>
     <Route path="SageStart/CardManager" element = {<CardManager/>}>
+    </Route>
+    <Route path="SageStart/SequenceMemory" element = {<SequenceMemory/>}>
     </Route>
     <Route path="MoCa" element = {<MoCa/>}>
     </Route>
