@@ -10,6 +10,7 @@ import useToken from './useToken'
 import FirstTest from './pages/FirstTest'
 import SageStart from './pages/SageStart'
 import MoCa from './pages/MoCa'
+import CardManager from './pages/CardManager'
 
 function App() {
     const { token, setToken } = useToken();
@@ -37,7 +38,7 @@ function App() {
     </Route>
     <Route path="SageStart" element={<SageStart/>}>
     </Route>
-    <Route path="FirstTest" element = {<FirstTest/>}>
+    <Route path="SageStart/CardManager" element = {<CardManager/>}>
     </Route>
     <Route path="MoCa" element = {<MoCa/>}>
     </Route>
