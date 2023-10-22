@@ -7,8 +7,8 @@ const Button = () => {
   const [clicked, setClicked] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
   const [linkText, setLinkText] = useState('')
-  const [gameList, setGameList] = useState(['CardManager', 'SequenceMemory']);
-  const randomGame = Math.floor(Math.random() * 2);
+  const [gameList, setGameList] = useState(['CardManager', 'SequenceMemory', 'BackwardWords']);
+  const randomGame = Math.floor(Math.random() * 3);
   const handleClick = () => {
     setClicked(true);
   };
