@@ -1,22 +1,23 @@
-import logo from './logo.svg';
-import React, { useState } from 'react';
-import './App.css';
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import Startup from './pages/Startup'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
-import StartGame from './pages/StartGame'
-import useToken from './useToken'
-import SageStart from './pages/SageStart'
-import MoCa from './pages/MoCa'
-import CardManager from './pages/CardManager'
-import SequenceMemory from './pages/SequenceMemory'
+import logo from "./logo.svg";
+import React, { useState } from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Startup from "./pages/Startup";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import StartGame from "./pages/StartGame";
+import useToken from "./useToken";
+import SageStart from "./pages/SageStart";
+import MoCa from "./pages/MoCa";
+import CardManager from "./pages/CardManager";
+import SequenceMemory from "./pages/SequenceMemory";
+import BackwardWords from "./pages/BackwardWords";
 
 function App() {
-    const { token, setToken } = useToken();
+  const { token, setToken } = useToken();
 
-  if(!token) {
-    return <Login setToken={setToken} />
+  if (!token) {
+    return <Login setToken={setToken} />;
   }
 
   return (
@@ -29,25 +30,23 @@ function App() {
     //   <Route path="StartGame" element={<StartGame/>}/>
     //   </Routes>
     // </BrowserRouter>
-    // </div> 
+    // </div>
 
-<div className="wrapper">
-<BrowserRouter>
-  <Routes>
-    <Route path="/" element={<StartGame/>}>
-    </Route>
-    <Route path="SageStart" element={<SageStart/>}>
-    </Route>
-    <Route path="SageStart/CardManager" element = {<CardManager/>}>
-    </Route>
-    <Route path="SageStart/SequenceMemory" element = {<SequenceMemory/>}>
-    </Route>
-    <Route path="MoCa" element = {<MoCa/>}>
-    </Route>
-  </Routes>
-</BrowserRouter>
-</div>
-
+    <div className="wrapper">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<StartGame />}></Route>
+          <Route path="SageStart" element={<SageStart />}></Route>
+          <Route path="SageStart/CardManager" element={<CardManager />}></Route>
+          <Route
+            path="SageStart/SequenceMemory"
+            element={<SequenceMemory />}
+          ></Route>
+          <Route path="MoCa" element={<MoCa />}></Route>
+          <Route path="BackwardWords" element={<BackwardWords />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
