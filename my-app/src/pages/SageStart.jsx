@@ -1,12 +1,11 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './SageStart.css';
+import { Outlet } from 'react-router-dom';
 
 const Button = () => {
   const [clicked, setClicked] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
-  const [linkText, setLinkText] = useState('')
-  const [gameList, setGameList] = useState(['CardManager', 'SequenceMemory']);
-  const randomGame = Math.floor(Math.random() * 2);
 
   const handleClick = () => {
     setClicked(true);
@@ -14,22 +13,22 @@ const Button = () => {
 
   setTimeout(() => {
     setFadeIn(true);
-    setLinkText(gameList[randomGame]);
+
   }, 500);
 
   return (
-    <div className="container">
+    <div className="containerss">
     <button
       className={`myButtonss ${clicked ? 'clicked' : ''} ${fadeIn ? 'fadeIn' : ''}`}
       onClick={handleClick}
     >
-    <Link to="CardManager">
-      Start Assessment
+    <Link to='CardManager'>
+      Start Games!
     </Link>
+    <Outlet />
     </button>
     </div>
   );
 };
 
-export default Button;
 export default Button;

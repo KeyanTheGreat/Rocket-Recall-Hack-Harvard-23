@@ -8,6 +8,8 @@
   
     margin: 0 auto;
     padding: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
   
   .h1 {
@@ -24,6 +26,21 @@
     text-align: center;
     color: rgb(241, 239, 242);
     font-size: 20;
+  }
+
+  .myButtoni {
+    background-color: #11f692;
+    border: solid #eb2d8c;
+    border-radius: 30px;
+    color: white;
+    font: 1.2rem "Fira Sans", sans-serif;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
   }
   
   .containeri {

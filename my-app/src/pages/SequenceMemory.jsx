@@ -13,6 +13,8 @@ const Game = () => {
   const [buttonPresses, setButtonPresses] = useState([]);
 
   const [index, setIndex] = useState(1);
+
+  const [link, setlink] = useState('');
  
   const [buttonColors, setButtonColors] = useState({
     b1: '',
@@ -59,6 +61,7 @@ const click = () => {
     repeat()
     } else {
         console.log('Incorrect sequence');
+        setlink('MoCa')
         setButtonText('Incorrect :( --- Next')
         setOpacity(1);
         //this is what happens if they fail. index here will hold total value
@@ -102,7 +105,9 @@ const click = () => {
   <button className="grid-item" id="8" onClick={() => {handleButtonClick(8)}} style={{ backgroundColor: buttonColors.b8 }}></button>
   <button className="grid-item" id="9" onClick={() => {handleButtonClick(9)}} style={{ backgroundColor: buttonColors.b9 }}></button>
     </div>
-    <button className={"myButton"} onClick={() => {click()}} style={{ opacity: opacity }}> {buttonText} </button>
+    <button className={"myButton"} onClick={() => {click()}} style={{ opacity: opacity }}> <Link to={link}>
+    {buttonText} 
+    </Link></button>
     <hsm className='hsm'>Memorize the squares that are colored blue, and after they stop flashing, click on them in the order they lit up!</hsm>
     </div>
   );

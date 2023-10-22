@@ -40,9 +40,9 @@ function App() {
     </Route>
     <Route path="SageStart/CardManager" element = {<CardManager/>}>
     </Route>
-    <Route path="SageStart/SequenceMemory" element = {<SequenceMemory/>}>
+    <Route path="SageStart/CardManager/SequenceMemory" element = {<SequenceMemory/>}>
     </Route>
-    <Route path="MoCa" element = {<MoCa/>}>
+    <Route path="SageStart/CardManager/SequenceMemory/MoCa" element = {<MoCa/>}>
     </Route>
   </Routes>
 </BrowserRouter>
