@@ -14,6 +14,7 @@ export default function CardManager() {
         <h1 className='h1'>Solar Recall</h1>
         <Cards sendDataToParent={handleData} />
         <h2 className='h2'>Clicks: {data}</h2>
+        <h3 className='h3'>Memorize the cards, and select matching pairs!</h3>
         </body>
     </div>
     );

@@ -19,6 +19,12 @@
     text-align: center;
     color: rgb(241, 239, 242);
   }
+
+  .h3 {
+    text-align: center;
+    color: rgb(241, 239, 242);
+    font-size: 20;
+  }
   
   .container {
     margin: 0 auto;

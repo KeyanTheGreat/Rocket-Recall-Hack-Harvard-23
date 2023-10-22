@@ -103,6 +103,7 @@ const click = () => {
   <button className="grid-item" id="9" onClick={() => {handleButtonClick(9)}} style={{ backgroundColor: buttonColors.b9 }}></button>
     </div>
     <button className={"myButton"} onClick={() => {click()}} style={{ opacity: opacity }}> {buttonText} </button>
+    <h1 className='h1'>Memorize the squares that are colored blue, and after they stop flashing, click on them in the order they lit up!</h1>
     </div>
   );
 };
