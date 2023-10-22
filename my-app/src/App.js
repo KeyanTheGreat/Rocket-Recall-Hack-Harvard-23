@@ -41,11 +41,11 @@ function App() {
     </Route>
     <Route path="SageStart/CardManager" element = {<CardManager/>}>
     </Route>
-    <Route path="SageStart/CardManager/SequenceMemory" element = {<SequenceMemory/>}>
+    <Route path="SageStart/SequenceMemory" element = {<SequenceMemory/>}>
     </Route>
-    <Route path="SageStart/CardManager/SequenceMemory/MoCa" element = {<MoCa/>}>
+    <Route path="SageStart/SequenceMemory/SendEmail" element = {<SendEmail/>}>
     </Route>
-    <Route path="SendEmail" element = {<SendEmail/>}>
+    <Route path="SageStart/CardManager/SendEmail" element = {<SendEmail/>}>
     </Route>
   </Routes>
 </BrowserRouter>
