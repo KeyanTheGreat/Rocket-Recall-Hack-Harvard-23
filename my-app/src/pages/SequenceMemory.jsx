@@ -1,7 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useContext } from 'react';
 import './SequenceMemory.css';
-
+import GlobalContext, {Users} from '../globals'
+import {stats} from '../globals'
+;
 const Game = () => {
 //index is the score. once they fail, (the next comment is where) the index will hold how many boxes they got to. 
   const [opacity, setOpacity] = useState(1);
@@ -15,6 +17,7 @@ const Game = () => {
   const [index, setIndex] = useState(1);
 
   const [link, setlink] = useState('');
+  let User = useContext(GlobalContext);
  
   const [buttonColors, setButtonColors] = useState({
     b1: '',
@@ -64,6 +67,11 @@ const click = () => {
         setlink('MoCa')
         setButtonText('Incorrect :( --- Next')
         setOpacity(1);
+        // console.log("Stats" + Users)
+        // Array.from(User.stats[MEMORY]).push(index);
+        // console.log(User)
+        stats.memory_acc.push(index)
+        console.log(stats)
         //this is what happens if they fail. index here will hold total value
         
     }
