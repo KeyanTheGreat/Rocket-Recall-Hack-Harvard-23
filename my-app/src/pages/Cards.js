@@ -77,7 +77,7 @@ const Cards = ({ sendDataToParent }) => { //going layers deep is hell, look into
   };
 
   return (
-    <div className="container">
+    <div className="containeri">
       {cards.map((card, index) => {
         return (
           <Card

@@ -90,7 +90,7 @@ const click = () => {
   };
 
   return (
-    <div className="container" style={{display: 'flex', flexDirection: 'column'}}>
+    <div className="containersm" style={{display: 'flex', flexDirection: 'column'}}>
         <div className="grid-container">
   <button className="grid-item" id="1" onClick={() => {handleButtonClick(1)}}  style={{ backgroundColor: buttonColors.b1 }}></button> 
   <button className="grid-item" id="2" onClick={() => {handleButtonClick(2)}}  style={{ backgroundColor: buttonColors.b2 }}></button>
@@ -103,7 +103,7 @@ const click = () => {
   <button className="grid-item" id="9" onClick={() => {handleButtonClick(9)}} style={{ backgroundColor: buttonColors.b9 }}></button>
     </div>
     <button className={"myButton"} onClick={() => {click()}} style={{ opacity: opacity }}> {buttonText} </button>
-    <h1 className='h1'>Memorize the squares that are colored blue, and after they stop flashing, click on them in the order they lit up!</h1>
+    <hsm className='hsm'>Memorize the squares that are colored blue, and after they stop flashing, click on them in the order they lit up!</hsm>
     </div>
   );
 };
