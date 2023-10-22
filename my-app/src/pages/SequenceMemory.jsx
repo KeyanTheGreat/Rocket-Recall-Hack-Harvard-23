@@ -3,7 +3,7 @@ import React, { useState, useMemo } from 'react';
 import './SequenceMemory.css';
 
 const Game = () => {
-
+//index is the score. once they fail, (the next comment is where) the index will hold how many boxes they got to. 
   const [opacity, setOpacity] = useState(1);
 
   const [buttonText, setButtonText] = useState('Start');
@@ -54,7 +54,6 @@ const click = () => {
     if ((buttonPresses +"," + buttonId).toString() === randList.slice(0, index-1).toString()) {
         setButtonPresses(prevButtonPresses => []);
         const timeout = setTimeout(() => {
-          // Perform the desired operation after the delay
           console.log('Correct sequence');
         }, 2000);
     repeat()
@@ -62,6 +61,7 @@ const click = () => {
         console.log('Incorrect sequence');
         setButtonText('Incorrect :( --- Next')
         setOpacity(1);
+        //this is what happens if they fail. index here will hold total value
         
     }
   };
