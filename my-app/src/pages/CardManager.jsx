@@ -21,7 +21,7 @@ export default function CardManager() {
         <button
       className={"myButtoni"}
     >
-    <Link to='SequenceMemory'>
+    <Link to='SendEmail'>
       Next
     </Link>
     <Outlet />

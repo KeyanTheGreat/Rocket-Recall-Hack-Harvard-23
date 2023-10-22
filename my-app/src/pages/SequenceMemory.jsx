@@ -64,7 +64,7 @@ const click = () => {
     repeat()
     } else {
         console.log('Incorrect sequence');
-        setlink('MoCa')
+        setlink('SendEmail')
         setButtonText('Incorrect :( --- Next')
         setOpacity(1);
         // console.log("Stats" + Users)
@@ -113,7 +113,7 @@ const click = () => {
   <button className="grid-item" id="8" onClick={() => {handleButtonClick(8)}} style={{ backgroundColor: buttonColors.b8 }}></button>
   <button className="grid-item" id="9" onClick={() => {handleButtonClick(9)}} style={{ backgroundColor: buttonColors.b9 }}></button>
     </div>
-    <button className={"myButton"} onClick={() => {click()}} style={{ opacity: opacity }}> <Link to={link}>
+    <button className={"myButton"} onClick={() => {click()}} style={{ opacity: opacity }}> <Link to= {link}>
     {buttonText} 
     </Link></button>
     <hsm className='hsm'>Memorize the squares that are colored blue, and after they stop flashing, click on them in the order they lit up!</hsm>
