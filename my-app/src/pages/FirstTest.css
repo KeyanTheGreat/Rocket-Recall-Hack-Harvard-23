@@ -3,22 +3,22 @@
     justify-content: center;
     align-items: center;
     height: 100vh; 
-    background-color: black; 
+ 
   }
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    width: 300px; 
 }
 .grid-item {
     background-color: white; 
     border: solid cyan;
-    color: white;
     padding: 15px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    width: 50px;
+    height: 50px;
 }
 
 .myButton {
@@ -27,40 +27,13 @@
     border-radius: 30px;
     color: white;
     font: 1.2rem "Fira Sans", sans-serif;
-    padding: 15px 32px;
+    padding: 15px 40px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 32px;
     margin: 4px 2px;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+
+    
   }
   
-  .myButton.clicked {
-    animation: buttonClickAnimation 0.5s;
-  }
-  .color-white {
-    background-color: white !important;
-  }
-  
-  .color-blue {
-    background-color: blue !important;
-  }
-  
-  @keyframes buttonClickAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(0.9);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  .myButton.fadeIn {
-    opacity: 1;
-  }

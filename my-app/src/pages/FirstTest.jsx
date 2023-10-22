@@ -1,86 +1,109 @@
 import { Outlet, Link } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import './FirstTest.css';
 
 const Game = () => {
-    const [showButton, setShowButton] = useState(false);
-  const [clicked, setClicked] = useState(false);
-  const [fadeIn, setFadeIn] = useState(false);
-  let randList = Array.from({ length: 30 }, () => Math.floor(Math.random() * 9) + 1);
-  let buttonPresses = [];
-  let index = 0
-  const handleClick = () => {
-    setClicked(true);
+
+  const [opacity, setOpacity] = useState(1);
+
+  const [buttonText, setButtonText] = useState('Start');
+
+  const randList = useMemo(() => Array.from({ length: 30 }, () => Math.floor(Math.random() * 9) + 1), []);
+
+  const [buttonPresses, setButtonPresses] = useState([]);
+
+  const [index, setIndex] = useState(1);
+ 
+  const [buttonColors, setButtonColors] = useState({
+    b1: '',
+    b2: '',
+    b3: '',
+    b4: '',
+    b5: '',
+    b6: '',
+    b7: '',
+    b8: '',
+    b9: ''
+});
+const click = () => {
+    repeat();
+    setOpacity(0);
   };
 
-  function changeColor(elementId, colorClass) {
-    const element = document.getElementById(elementId);
-    element.classList.remove('color-white', 'color-blue'); 
-    element.classList.add(colorClass);
-  }
-  
   function repeat(){
-    index += 1
+    setIndex(prevIndex => prevIndex + 1);
     for (let i = 0; i < index; i++) {
-        changeColor(randList[i],'color-blue')
-        setTimeout(console.log('Before delay'), 1000);
-        changeColor(randList[i],'color-white')
+        const timeouto = setTimeout(() => {
+        setButtonColors((prevState) => ({
+            ...prevState,
+            ['b' + randList[i]]: 'blue'
+          }));
+        }, 1500 * (i ));
+          const timeout = setTimeout(() => {
+             setButtonColors((prevState) => ({
+                ...prevState,
+                ['b' + randList[i]]: 'white'
+             }));
+            console.log(i);
+            console.log(randList);
+          }, 1500 * (i + 1));
+          
     }
-  }
-  const checkSequence = () => {
-    if (buttonPresses.toString() === randList.slice(0, index-1).toString()) {
-      buttonPresses = []; 
-      setTimeout(console.log('Before delay'), 2000);
-      repeat(index)
+  };
+  const checkSequence = (buttonId) => {
+    if ((buttonPresses +"," + buttonId).toString() === randList.slice(0, index-1).toString()) {
+        setButtonPresses(prevButtonPresses => []);
+        const timeout = setTimeout(() => {
+          // Perform the desired operation after the delay
+          console.log('Correct sequence');
+        }, 2000);
+    repeat()
     } else {
-        setShowButton(true);
-        randList = [100,100]
+        console.log('Incorrect sequence');
+        setButtonText('Incorrect :( --- Next')
+        setOpacity(1);
+        
     }
   };
 
   const handleButtonClick = (buttonId) => {
-    buttonPresses.push(buttonId);
-    
-    if (buttonPresses.length === randList.slice(0, index-1).length) {
-      checkSequence();
+    if (buttonText == 'Incorrect :( --- Next'){
+
+    } else {
+    setButtonPresses(prevButtonPresses => [...prevButtonPresses, buttonId]);
+    if (buttonPresses.length === randList.slice(0, index-1).length -1) {
+        console.log((buttonId));
+        console.log(randList[0]);
+      if(index == 2 && buttonId.toString() ==  randList[0].toString()){
+        const timeout = setTimeout(() => {
+            // Perform the desired operation after the delay
+            console.log('Correct sequence');
+          }, 2000);
+          setButtonPresses(prevButtonPresses => []);
+      repeat()
+      } else{
+        console.log(' CheckSequence');
+      checkSequence(buttonId);
+      }
     }
+}
   };
-document.getElementById('1').addEventListener('click', () => handleButtonClick(1));
-document.getElementById('2').addEventListener('click', () => handleButtonClick(2));
-document.getElementById('3').addEventListener('click', () => handleButtonClick(3));
-document.getElementById('1').addEventListener('click', () => handleButtonClick(4));
-document.getElementById('2').addEventListener('click', () => handleButtonClick(5));
-document.getElementById('3').addEventListener('click', () => handleButtonClick(6));
-document.getElementById('1').addEventListener('click', () => handleButtonClick(7));
-document.getElementById('2').addEventListener('click', () => handleButtonClick(8));
-document.getElementById('3').addEventListener('click', () => handleButtonClick(9));
-
-  repeat();
-
 
   return (
-    <div className="container">
+    <div className="container" style={{display: 'flex', flexDirection: 'column'}}>
         <div className="grid-container">
-  <button className="grid-item" id="1"></button> 
-  <button className="grid-item" id="2"></button>
-  <button className="grid-item" id="3"></button>
-  <button className="grid-item" id="4"></button>
-  <button className="grid-item" id="5"></button>
-  <button className="grid-item" id="6"></button>
-  <button className="grid-item" id="7"></button>
-  <button className="grid-item" id="8"></button>
-  <button className="grid-item" id="9"></button>
+  <button className="grid-item" id="1" onClick={() => {handleButtonClick(1)}}  style={{ backgroundColor: buttonColors.b1 }}></button> 
+  <button className="grid-item" id="2" onClick={() => {handleButtonClick(2)}}  style={{ backgroundColor: buttonColors.b2 }}></button>
+  <button className="grid-item" id="3" onClick={() => {handleButtonClick(3)}}  style={{ backgroundColor: buttonColors.b3 }}></button>
+  <button className="grid-item" id="4" onClick={() => {handleButtonClick(4)}}  style={{ backgroundColor: buttonColors.b4 }}></button>
+  <button className="grid-item" id="5" onClick={() => {handleButtonClick(5)}} style={{ backgroundColor: buttonColors.b5 }}></button>
+  <button className="grid-item" id="6" onClick={() => {handleButtonClick(6)}}  style={{ backgroundColor: buttonColors.b6 }}></button>
+  <button className="grid-item" id="7" onClick={() => {handleButtonClick(7)}}  style={{ backgroundColor: buttonColors.b7}}></button>
+  <button className="grid-item" id="8" onClick={() => {handleButtonClick(8)}} style={{ backgroundColor: buttonColors.b8 }}></button>
+  <button className="grid-item" id="9" onClick={() => {handleButtonClick(9)}} style={{ backgroundColor: buttonColors.b9 }}></button>
     </div>
-    {showButton && <button
-      className={`myButton ${clicked ? 'clicked' : ''} ${fadeIn ? 'fadeIn' : ''}`}
-      onClick={handleClick}
-    >
-    <Link to="login">
-     Incorrect, Next Task
-    </Link>
-    </button>}
+    <button className={"myButton"} onClick={() => {click()}} style={{ opacity: opacity }}> {buttonText} </button>
     </div>
   );
 };
-<Link to="login">Log in</Link>
 export default Game;
