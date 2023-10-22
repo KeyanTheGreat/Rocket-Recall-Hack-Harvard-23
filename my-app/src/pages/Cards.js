@@ -88,6 +88,7 @@ const Cards = ({ sendDataToParent }) => { //going layers deep is hell, look into
           />
         );
       })}
+      
     </div>
   );
 };

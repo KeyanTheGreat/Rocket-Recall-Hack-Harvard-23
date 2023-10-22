@@ -11,7 +11,7 @@ import SageStart from "./pages/SageStart";
 import MoCa from "./pages/MoCa";
 import CardManager from "./pages/CardManager";
 import SequenceMemory from "./pages/SequenceMemory";
-import BackwardWords from "./pages/BackwardWords";
+import SendEmail from "./pages/SendEmail";
 
 function App() {
   const { token, setToken } = useToken();
@@ -42,8 +42,14 @@ function App() {
             path="SageStart/SequenceMemory"
             element={<SequenceMemory />}
           ></Route>
-          <Route path="MoCa" element={<MoCa />}></Route>
-          <Route path="BackwardWords" element={<BackwardWords />}></Route>
+          <Route
+            path="SageStart/SequenceMemory/SendEmail"
+            element={<SendEmail />}
+          ></Route>
+          <Route
+            path="SageStart/CardManager/SendEmail"
+            element={<SendEmail />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -26,11 +26,11 @@
     font-size: 20;
   }
 .myButton {
-    background-color: #59007f;
-    border: solid #7600a9;
+  background-color: #11f692;
+  border: solid #eb2d8c;
     border-radius: 30px;
     color: white;
-    font: 1.2rem "Fira Sans", sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
