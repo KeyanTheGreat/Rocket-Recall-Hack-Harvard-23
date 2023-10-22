@@ -6,7 +6,7 @@
     background-color: rgba(251, 251, 251, 0); 
   }
 
-.myButton {
+.myButtonss {
     background-color: #11f692;
     border: solid #eb2d8c;
     border-radius: 30px;
@@ -23,7 +23,7 @@
     transition: opacity 0.5s ease-in-out;
   }
   
-  .myButton.clicked {
+  .myButtonss.clicked {
     animation: buttonClickAnimation 0.5s;
   }
   
@@ -39,6 +39,6 @@
     }
   }
   
-  .myButton.fadeIn {
+  .myButtonss.fadeIn {
     opacity: 1;
   }
