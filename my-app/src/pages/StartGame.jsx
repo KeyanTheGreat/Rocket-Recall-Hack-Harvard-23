@@ -1,11 +1,12 @@
-import { Outlet, Link } from "react-router-dom";
+import React, { Outlet, Link } from 'react-router-dom';
 
 export default function StartGame() {
-    return(
-        <div className="startgame_container">
+    return (
+        <div className="startgame">
             <h1>Hello Today! Let's play </h1>
-                <div style={{paddingBottom: 'px'}}>
-                <button><Link to="login">Let's Play!</Link></button>
+                <div style={{paddingBottom: '10px'}}>
+                <button><Link to="SageStart">Let's Start!</Link></button>
+                <Outlet />
                 </div>
         </div>
 

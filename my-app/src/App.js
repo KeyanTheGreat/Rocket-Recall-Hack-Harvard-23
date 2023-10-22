@@ -8,6 +8,7 @@ import Signup from './pages/Signup'
 import StartGame from './pages/StartGame'
 import useToken from './useToken'
 import FirstTest from './pages/FirstTest'
+import SageStart from './pages/SageStart'
 import MoCa from './pages/MoCa'
 
 function App() {
@@ -32,7 +33,9 @@ function App() {
 <div className="wrapper">
 <BrowserRouter>
   <Routes>
-    <Route path="StartGame" element={<StartGame/>}>
+    <Route path="/" element={<StartGame/>}>
+    </Route>
+    <Route path="SageStart" element={<SageStart/>}>
     </Route>
     <Route path="FirstTest" element = {<FirstTest/>}>
     </Route>

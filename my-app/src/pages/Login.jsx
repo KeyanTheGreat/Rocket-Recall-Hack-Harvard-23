@@ -29,7 +29,6 @@ export default function Login({ setToken }) {
       }
       //may not be able to get object from this, but can get username and password needed for an object
       //Create user object with fields username, password, etc?
-     
       
 
     return(
