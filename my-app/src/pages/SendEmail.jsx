@@ -25,8 +25,8 @@ export default function ContactUs() {
 
   return (
     <form className="contact-form" onSubmit={sendEmail}>
-      <p>Would you like to send an email to your healthcare provider?</p>
-      <p>Email:</p>
+      <h className={"p1"}>Would you like to send an email to your healthcare provider?</h>
+      <h className={"p2"}> Email:</h>
       <input type="email" name="user_email" />
       <input type="submit" value="Send" />
     </form>
